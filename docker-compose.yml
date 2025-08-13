@@ -38,6 +38,7 @@ services:
         condition: "service_started"
     entrypoint: "/usr/bin/tini --  /docker-entrypoint.sh"
     environment:
+      GRAYLOG_ROOT_TIMEZONE: "America/Sao_Paulo"
       GRAYLOG_NODE_ID_FILE: "/usr/share/graylog/data/data/node-id"
       GRAYLOG_PASSWORD_SECRET: "${GRAYLOG_PASSWORD_SECRET}"
       GRAYLOG_ROOT_PASSWORD_SHA2: "${GRAYLOG_ROOT_PASSWORD_SHA2}"
